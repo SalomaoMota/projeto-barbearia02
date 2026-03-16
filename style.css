@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+:root {
+    --cor-body: #0d0d0d;
+    --cor-1: #29a699;
+    --cor-2: #f2ae72;
+    --cor-3: #d98452;
+    --cor-4: #8c1004;
+    --font-family-titulos: "Fjalla One", sans-serif;
+    --font-family-texto: "Karla", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-body);
+    color: var(--cor-1);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    min-height: 80px;
+    background-color: var(--cor-1);
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    border-bottom: 2px solid var(--cor-4);
+    box-shadow: 0 0 10px var(--cor-1);
+    display: flex;
+    
+}
+
+.logotop {
+    height: 100px;
+    width: 100px;
+    margin-left: 40px;
+}
+
+nav {
+    margin: auto;
+    margin-top: 50px;
+    width: 400px;
+}
+
+nav > a {
+    text-decoration: none;
+    font-family: var(--font-family-titulos);
+    color: var(--cor-4);
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+nav > a::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cor-2);
+    transition: width 0.5s ease;
+}
+
+nav > a:hover::after {
+    width: 100%;
+    
+}
+
+main {
+    font-family: var(--font-family-texto);
+    padding-top: 20vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1,h2 {
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: var(--font-family-titulos);
+    padding-top: 40px;
+    padding-bottom: 15px;
+    text-shadow: 1px 1px 20px var(--cor-1);
+}
+
+
+.logo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--cor-1);
+}
+
+.cortes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    max-width: 1300px;
+    margin: 0 auto;
+    
+}    
+
+.nossos-cortes {
+    height: 400px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    border: 2px solid var(--cor-4);
+    cursor: pointer;
+    border-radius: 20px
+    
+}
+
+.nossos-cortes:hover {
+    box-shadow: 0 0 30px var(--cor-1);
+    transform: translateY(-10px) scale(1.03);
+}
+
+img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.sub-titulo {
+    color: var(--cor-4);
+    padding: 50px;
+    font-size: 4em;
+    text-align: center;
+}
+
+.sobre-nós{
+    background-color: var(--cor-body);
+    border: 2px solid var(--cor-4);
+    color: var(--cor-1);
+    padding: 2em;
+    max-width: 700px;
+    margin:0 auto;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sobre-nós:hover {
+    box-shadow: 0 0 30px var(--cor-1);
+    transform: translateY(-10px) scale(1.03);
+}
+
+p {
+    font-family: var(--font-family-texto);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.endereço {
+    padding: 2em;
+    max-width: 700px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    margin: 0  auto;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.endereço:hover {
+    box-shadow: 0 0 30px var(--cor-1);
+    transform: translateY(-10px) scale(1.03);
+}
+
+iframe {
+    max-width: 600px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.sub-titulo2 {
+    text-align: center;
+    color: var(--cor-4);
+    font-size: 2em;
+}
+
+footer {
+    background-color: var(--cor-1);
+    font-style: italic;
+    font-family: var(--font-family-texto);
+    color: var(--cor-4);
+    margin-top: 50px;
+    padding: 10px;
+}
